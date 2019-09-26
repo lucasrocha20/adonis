@@ -16,10 +16,10 @@ class TaskSchema extends Schema {
         .onUpdate('CASCADE')
         .onDelete('CASCADE')
       table
-        .integer('project_id')
+        .integer('user_id')
         .unsigned()
         .references('id')
-        .inTable('users')
+        .inTable('projects')
         .onUpdate('CASCADE')
         .onDelete('SET NULL')
       table
